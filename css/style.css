@@ -1,5 +1,896 @@
 
-/* MARCAS DE VERIFICACIÓN */
+/* =========================================
+   WEB LUIS OVALLE PSICOLOGÍA
+   HOJA DE ESTILOS REORGANIZADA
+   ========================================= */
+
+/* 1. CONFIGURACIÓN GENERAL */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Cambiar este valor para ampliar toda
+       la tipografía del ordenador */
+    --letra-ordenador: 18px;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-base);
+    color: var(--text-main);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .logo {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    color: var(--text-main);
+    letter-spacing: -0.01em;
+}
+
+
+/* =========================================
+   2. MENÚ DE NAVEGACIÓN
+   ========================================= */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background-color: rgba(249, 248, 246, 0.96);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.logo {
+    font-size: 1.25rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-main);
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+}
+
+
+/* =========================================
+   3. BOTONES
+   ========================================= */
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent);
+    color: #FFFFFF !important;
+    padding: 10px 22px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-main) !important;
+    border: 1.5px solid var(--text-main);
+}
+
+.btn-outline:hover {
+    background-color: var(--text-main);
+    color: #FFFFFF !important;
+}
+
+
+/* =========================================
+   4. PORTADA / INICIO
+   ========================================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 8% 70px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1.1;
+    max-width: 580px;
+}
+
+.hero-tag {
+    display: inline-block;
+    background-color: var(--bg-alt);
+    padding: 5px 14px;
+    border-radius: 16px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--secondary);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.18;
+    margin-bottom: 20px;
+}
+
+.hero h1 i {
+    font-style: italic;
+    color: var(--accent);
+}
+
+.hero p {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   5. FOTOGRAFÍA DE LUIS
+   ========================================= */
+
+.hero-image-wrapper {
+    flex: 0.9;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 420px;
+    height: 520px;
+    background-color: #E2DDD5;
+    background-image: url('../img/luis-ovalle.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    border: 1px solid var(--border-light);
+}
+
+
+/* =========================================
+   6. FRASE DESTACADA
+   ========================================= */
+
+.quote-section {
+    background-color: var(--secondary);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 50px 8%;
+}
+
+.quote-section h2 {
+    font-size: 1.7rem;
+    color: #FFFFFF;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   7. MARCO CLÍNICO
+   ========================================= */
+
+.framework-section {
+    padding: 70px 8%;
+    background-color: var(--bg-alt);
+}
+
+.section-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.framework-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.framework-item {
+    background: #FFFFFF;
+    padding: 35px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-light);
+}
+
+.framework-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+    display: inline-block;
+    letter-spacing: 0.05em;
+}
+
+.framework-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.framework-item p {
+    color: var(--text-light);
+    font-size: 0.94rem;
+}
+
+
+/* =========================================
+   8. TARJETAS DE SERVICIOS DE INICIO
+   ========================================= */
+
+.services {
+    padding: 80px 8%;
+    background-color: var(--bg-base);
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-subtitle {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--secondary);
+    margin-bottom: 8px;
+}
+
+.services-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.services-header p {
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: #FFFFFF;
+    padding: 35px 28px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.service-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.service-meta {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+    display: block;
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.service-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.service-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+}
+
+.service-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   9. PROCESO EN PASOS
+   ========================================= */
+
+.process-section {
+    padding: 80px 8%;
+    background-color: #FFFFFF;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.step-card {
+    padding: 30px 25px;
+    border-left: 3px solid var(--accent);
+    background-color: var(--bg-base);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.step-num {
+    font-size: 1.8rem;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 6px;
+}
+
+.step-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+
+.step-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   10. TARIFAS
+   ========================================= */
+
+.pricing-section {
+    padding: 80px 8%;
+    background-color: var(--bg-base);
+}
+
+.pricing-card {
+    background: #FFFFFF;
+    border-radius: var(--border-radius);
+    padding: 45px 35px;
+    max-width: 850px;
+    margin: 0 auto;
+    border: 1px solid var(--border-light);
+}
+
+.pricing-header {
+    text-align: center;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+}
+
+.pricing-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.pricing-amount {
+    font-size: 3rem;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.pricing-duration {
+    font-size: 1rem;
+    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.pricing-note {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+.modalities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.modality-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.modality-item p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.modality-condition {
+    color: var(--secondary) !important;
+    font-size: 0.85rem !important;
+}
+
+.pricing-cta {
+    text-align: center;
+}
+
+
+/* =========================================
+   11. PREGUNTAS FRECUENTES
+   ========================================= */
+
+.faq-section {
+    padding: 80px 8%;
+    background-color: var(--bg-alt);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 18px 22px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    user-select: none;
+}
+
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 22px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--accent);
+}
+
+.faq-item[open] .faq-question::after {
+    content: '−';
+}
+
+.faq-item[open] .faq-question {
+    border-bottom: 1px solid var(--border-light);
+}
+
+.faq-answer {
+    padding: 18px 22px;
+    color: var(--text-light);
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   12. CONTACTO
+   ========================================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    background: #FFFFFF;
+    padding: 35px 25px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    border: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-meta {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--secondary);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.contact-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    color: var(--text-light);
+    font-size: 0.88rem;
+    margin-bottom: 22px;
+}
+
+
+/* =========================================
+   13. FOOTER
+   Se mantiene el diseño actual.
+   ========================================= */
+
+footer {
+    background-color: var(--bg-alt);
+    padding: 50px 8% 25px;
+    text-align: center;
+    border-top: 1px solid var(--border-light);
+}
+
+.footer-content p {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+}
+
+.footer-legal-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px auto 15px;
+    padding: 15px 0;
+    background-color: transparent !important;
+    box-shadow: none;
+    border: none;
+}
+
+.footer-legal-nav a {
+    margin: 0 10px;
+    background-color: transparent;
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-legal-nav a:hover {
+    color: var(--accent);
+}
+
+.copyright {
+    font-size: 0.78rem !important;
+    opacity: 0.6;
+    margin-top: 12px;
+}
+
+
+/* =========================================
+   14. SOBRE MÍ - DISEÑO EDITORIAL
+   ========================================= */
+
+.about-editorial {
+    background-color: var(--bg-base);
+    padding: 90px 8% 110px;
+}
+
+.about-editorial-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-editorial-heading {
+    margin-bottom: 45px;
+}
+
+.about-editorial-heading .section-subtitle {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.about-editorial-heading h2 {
+    font-size: 2.4rem;
+    line-height: 1.25;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.about-editorial-line {
+    width: 55px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--accent);
+}
+
+.about-editorial-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 55px;
+    align-items: start;
+}
+
+.about-editorial-text {
+    min-width: 0;
+}
+
+.about-editorial-text p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.about-editorial-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-editorial-text strong {
+    font-weight: 600;
+}
+
+.about-editorial-training {
+    min-width: 0;
+    background-color: #FFFFFF;
+    padding: 38px 40px;
+    border-radius: 14px;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.025);
+}
+
+.about-editorial-training h3 {
+    font-size: 1.55rem;
+    margin-bottom: 14px;
+}
+
+.about-training-line {
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent);
+    margin-bottom: 25px;
+}
+
+.about-editorial-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-editorial-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 22px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+.about-editorial-list li:last-child {
+    margin-bottom: 0;
+}
+
+.about-editorial-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--secondary);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+
+/* =========================================
+   15. ESPECIALIDADES - CUADRÍCULA 2 x 2
+   Compatible con clases esp-* del HTML.
+   ========================================= */
+
+.esp-container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+/* CABECERA */
+
+.esp-page-header {
+    background-color: var(--bg-base);
+    padding: 75px 8% 55px;
+    text-align: center;
+}
+
+.esp-kicker {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--secondary);
+    margin-bottom: 12px;
+}
+
+.esp-title {
+    font-family: 'Lora', serif;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.esp-intro {
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+/* CUADRÍCULA */
+
+.esp-main {
+    padding: 20px 8% 100px;
+    background-color: var(--bg-base);
+}
+
+.esp-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+/* TARJETAS */
+
+.esp-card {
+    min-width: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 38px 36px;
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.esp-card-top {
+    margin-bottom: 20px;
+}
+
+.esp-card-top::before {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 3px;
+    background-color: var(--accent);
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.esp-card-tag {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--secondary);
+    margin-bottom: 12px;
+}
+
+.esp-card-title {
+    font-family: 'Lora', serif;
+    font-size: 1.55rem;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.esp-card-text {
+    font-size: 0.98rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+/* LISTA DE INTERVENCIONES */
+
+.esp-card-list {
+    list-style: none;
+    padding: 24px 0 0;
+    margin: 0;
+    border-top: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.esp-card-list li {
+    position: relative;
+    padding-left: 27px;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--text-light);
+}
 
 .esp-card-list li::before {
     content: "✓";
@@ -11,17 +902,25 @@
     font-size: 1rem;
 }
 
+/* EFECTO AL PASAR EL RATÓN */
+
+@media (hover: hover) {
+    .esp-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent);
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.055);
+    }
+}
+
 /* BLOQUE FINAL DE CONTACTO */
 
 .esp-cta {
     max-width: 850px;
     margin: 75px auto 0;
     padding: 55px 45px;
-
     background-color: var(--bg-alt);
     border: 1px solid var(--border-light);
     border-radius: 16px;
-
     text-align: center;
 }
 
@@ -41,11 +940,80 @@
     margin: 0 auto 28px;
 }
 
+
 /* =========================================
-   TABLET Y MÓVIL
+   16. RESPONSIVE - TABLET Y MÓVIL
    ========================================= */
 
 @media screen and (max-width: 900px) {
+
+    /* Menú */
+
+    .nav-links {
+        display: none;
+    }
+
+    /* Inicio */
+
+    .hero {
+        flex-direction: column-reverse;
+        padding-top: 35px;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-image-wrapper {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-image {
+        height: 380px;
+    }
+
+    .pricing-amount {
+        font-size: 2.4rem;
+    }
+
+    /* Sobre mí */
+
+    .about-editorial {
+        padding: 60px 8% 80px;
+    }
+
+    .about-editorial-heading {
+        margin-bottom: 30px;
+    }
+
+    .about-editorial-heading h2 {
+        font-size: 2rem;
+    }
+
+    .about-editorial-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-editorial-text p {
+        line-height: 1.8;
+    }
+
+    .about-editorial-training {
+        padding: 30px 25px;
+    }
+
+    .about-editorial-training h3 {
+        font-size: 1.4rem;
+    }
+
+    /* Especialidades */
 
     .esp-page-header {
         padding: 55px 8% 45px;
@@ -78,7 +1046,10 @@
     }
 }
 
-/* MÓVILES PEQUEÑOS */
+
+/* =========================================
+   17. MÓVILES PEQUEÑOS
+   ========================================= */
 
 @media screen and (max-width: 480px) {
 
@@ -104,5 +1075,36 @@
 
     .esp-cta {
         padding: 35px 22px;
+    }
+}
+
+
+/* =========================================
+   18. FOOTER EN MÓVIL
+   ========================================= */
+
+@media (max-width: 768px) {
+    .footer-legal-nav {
+        justify-content: center;
+        gap: 12px 20px;
+    }
+}
+
+
+/* =========================================
+   19. ESCALA GLOBAL SOLO PARA ORDENADOR
+
+   Para ampliar la tipografía modifica
+   --letra-ordenador al inicio del archivo.
+
+   16px = Original
+   18px = +12,5%
+   19px = +18,75%
+   20px = +25%
+   ========================================= */
+
+@media screen and (min-width: 1024px) {
+    html {
+        font-size: var(--letra-ordenador);
     }
 }
