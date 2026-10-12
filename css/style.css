@@ -165,7 +165,7 @@ nav {
     height: 520px;
     background-color: #E2DDD5;
     border-radius: 16px;
-    background-image: url('img/luis-ovalle.jpg');
+    background-image: url('../img/luis-ovalle.jpg');
     background-size: cover;
     background-position: center;
     border: 1px solid var(--border-light);
