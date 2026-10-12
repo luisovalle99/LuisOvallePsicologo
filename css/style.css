@@ -845,3 +845,212 @@ footer {
     }
 }
 
+/* =========================================
+   SOBRE MÍ - DISEÑO EDITORIAL ASIMÉTRICO
+
+   Distribución:
+   - Título superior
+   - Texto a la izquierda
+   - Formación a la derecha
+
+   Los tamaños de letra utilizan rem y
+   respetan la escala global de ordenador.
+   ========================================= */
+
+
+/* =========================================
+   1. CONTENEDOR PRINCIPAL
+   ========================================= */
+
+.about-editorial {
+    background-color: var(--bg-base);
+    padding: 90px 8% 110px;
+}
+
+.about-editorial-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   2. TÍTULO DE LA SECCIÓN
+   ========================================= */
+
+.about-editorial-heading {
+    margin-bottom: 45px;
+}
+
+.about-editorial-heading .section-subtitle {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.about-editorial-heading h2 {
+    font-size: 2.4rem;
+    line-height: 1.25;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+/* Pequeña línea decorativa bajo el título */
+.about-editorial-line {
+    width: 55px;
+    height: 3px;
+    background-color: var(--accent);
+    border-radius: 3px;
+}
+
+
+/* =========================================
+   3. DISTRIBUCIÓN EN DOS COLUMNAS
+   ========================================= */
+
+.about-editorial-grid {
+    display: grid;
+
+    /* Texto ligeramente más ancho */
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+
+    gap: 55px;
+    align-items: start;
+}
+
+
+/* =========================================
+   4. COLUMNA IZQUIERDA - TEXTO
+   ========================================= */
+
+.about-editorial-text {
+    min-width: 0;
+}
+
+.about-editorial-text p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.about-editorial-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-editorial-text strong {
+    font-weight: 600;
+}
+
+
+/* =========================================
+   5. COLUMNA DERECHA - MI FORMACIÓN
+   ========================================= */
+
+.about-editorial-training {
+    min-width: 0;
+    background-color: #FFFFFF;
+
+    padding: 38px 40px;
+
+    border-radius: 14px;
+    border: 1px solid var(--border-light);
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.025);
+}
+
+.about-editorial-training h3 {
+    font-size: 1.55rem;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+/* Línea decorativa en la tarjeta */
+.about-training-line {
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent);
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   6. LISTA DE FORMACIÓN
+   ========================================= */
+
+.about-editorial-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-editorial-list li {
+    position: relative;
+
+    padding-left: 30px;
+    margin-bottom: 22px;
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+.about-editorial-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Icono de verificación */
+.about-editorial-list li::before {
+    content: "✓";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    color: var(--secondary);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+
+/* =========================================
+   7. ADAPTACIÓN A TABLET Y MÓVIL
+
+   En pantallas pequeñas, las columnas
+   se colocan una debajo de la otra.
+   ========================================= */
+
+@media screen and (max-width: 900px) {
+
+    .about-editorial {
+        padding: 60px 8% 80px;
+    }
+
+    .about-editorial-heading {
+        margin-bottom: 30px;
+    }
+
+    .about-editorial-heading h2 {
+        font-size: 2rem;
+    }
+
+    .about-editorial-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-editorial-text p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+    .about-editorial-training {
+        padding: 30px 25px;
+    }
+
+    .about-editorial-training h3 {
+        font-size: 1.4rem;
+    }
+}
+
+
