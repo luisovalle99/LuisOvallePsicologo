@@ -624,7 +624,48 @@ footer {
     opacity: 0.6;
     margin-top: 12px;
 }
+/* =========================================
+   FOOTER - ENLACES LEGALES SIN RECUADRO
+   ========================================= */
 
+/* Contenedor de los enlaces legales */
+.footer-legal-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    /* Eliminar recuadro blanco */
+    background-color: transparent !important;
+    box-shadow: none;
+    border: none;
+
+    padding: 15px 0;
+    margin: 20px auto 15px;
+}
+
+/* Enlaces: Aviso Legal, Privacidad y Cookies */
+.footer-legal-nav a {
+    background-color: transparent;
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+/* Al pasar el ratón */
+.footer-legal-nav a:hover {
+    color: var(--accent);
+}
+
+/* Adaptación para móvil */
+@media (max-width: 768px) {
+    .footer-legal-nav {
+        justify-content: center;
+        gap: 12px 20px;
+    }
+}
 /* =========================================
    RESPONSIVE - MÓVIL Y TABLET
    ========================================= */
