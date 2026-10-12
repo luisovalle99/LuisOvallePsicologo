@@ -667,5 +667,45 @@ p {
         font-size: 20px;
     }
 }
+    
+/* =========================================
+   TIPOGRAFÍA PARA ORDENADOR
+   No modifica la versión móvil
+   ========================================= */
+
+@media (min-width: 1024px) {
+
+    /* Texto general */
+    body {
+        font-size: 18px;
+    }
+
+    /* Párrafos */
+    p {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    /* Menú de navegación */
+    .nav-links a {
+        font-size: 17px;
+    }
+
+    /* Nombre de Luis en la cabecera */
+    .logo {
+        font-size: 25px;
+    }
+
+    /* Botones */
+    .btn {
+        font-size: 17px;
+    }
+
+    /* Subtítulos de las secciones */
+    .section-subtitle {
+        font-size: 15px;
+    }
+}
+
 
 }
