@@ -1311,4 +1311,194 @@ footer {
 
 }
 
+/* =========================================
+   UBICACIÓN - DISEÑO RESPONSIVE
+   ========================================= */
+
+/* PANEL GENERAL */
+
+.location-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+
+    overflow: hidden;
+}
+
+/* INFORMACIÓN DE LA CONSULTA */
+
+.location-info {
+    min-width: 0;
+
+    padding: 45px 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* TÍTULO */
+
+.location-title {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+/* DIRECCIÓN */
+
+.location-address {
+    color: var(--text-main);
+    font-weight: 500;
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+/* DESCRIPCIÓN */
+
+.location-description {
+    color: var(--text-light);
+    font-size: 0.92rem;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+/* NOTA DE RESERVA */
+
+.location-notice {
+    background-color: var(--bg-alt);
+
+    padding: 18px;
+
+    border-radius: 8px;
+    border-left: 3px solid var(--secondary);
+}
+
+.location-notice strong {
+    color: var(--text-main);
+    font-size: 0.92rem;
+}
+
+.location-notice p {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin-top: 4px;
+}
+
+/* CONTENEDOR DEL MAPA */
+
+.location-map {
+    position: relative;
+    min-width: 0;
+    min-height: 380px;
+
+    background-color: var(--bg-alt);
+}
+
+/* MAPA INTERACTIVO */
+
+.location-map iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+
+    border: 0;
+}
+
+/* BOTÓN CÓMO LLEGAR */
+
+.location-directions {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    z-index: 2;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 22px;
+
+    background-color: var(--accent);
+    color: #FFFFFF;
+
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    border-radius: 30px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+
+    transition: background-color 0.2s ease;
+}
+
+.location-directions:hover {
+    background-color: var(--accent-hover);
+}
+
+/* =========================================
+   TABLET Y MÓVIL
+   ========================================= */
+
+@media screen and (max-width: 900px) {
+
+    /* Una columna */
+    .location-panel {
+        grid-template-columns: 1fr;
+    }
+
+    /* Información arriba */
+    .location-info {
+        padding: 30px 25px;
+    }
+
+    /* Mapa debajo */
+    .location-map {
+        height: 280px;
+        min-height: 280px;
+    }
+
+    .location-map iframe {
+        height: 100%;
+        min-height: 0;
+    }
+
+    /* Botón centrado */
+    .location-directions {
+        left: 50%;
+        bottom: 15px;
+
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+}
+
+/* =========================================
+   MÓVILES PEQUEÑOS
+   ========================================= */
+
+@media screen and (max-width: 480px) {
+
+    .location-info {
+        padding: 26px 20px;
+    }
+
+    .location-title {
+        font-size: 1.6rem;
+    }
+
+    .location-map {
+        height: 250px;
+        min-height: 250px;
+    }
+
+}
+
+
 
