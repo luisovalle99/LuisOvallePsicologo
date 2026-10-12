@@ -607,4 +607,65 @@ footer {
     .pricing-amount {
         font-size: 2.4rem;
     }
+    
+/* =========================================
+   TAMAÑO DE LETRA - AJUSTES GENERALES
+   ========================================= */
+
+/* Texto general de la web */
+body {
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+/* Párrafos */
+p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Menú de navegación */
+.nav-links a {
+    font-size: 16px;
+}
+
+/* Nombre de Luis en la cabecera */
+.logo {
+    font-size: 23px;
+}
+
+/* Botones */
+.btn {
+    font-size: 16px;
+}
+
+/* Subtítulos de secciones */
+.section-subtitle {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   AJUSTES PARA MÓVIL
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+}
+
 }
