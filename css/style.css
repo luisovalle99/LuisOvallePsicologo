@@ -644,29 +644,6 @@ p {
     font-size: 14px;
     letter-spacing: 1px;
 }
-
-/* =========================================
-   AJUSTES PARA MÓVIL
-   ========================================= */
-
-@media (max-width: 768px) {
-
-    body {
-        font-size: 16px;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    .nav-links a {
-        font-size: 16px;
-    }
-
-    .logo {
-        font-size: 20px;
-    }
-}
     
 /* =========================================
    TIPOGRAFÍA PARA ORDENADOR
