@@ -68,46 +68,91 @@
                 </div>
             </div>
 
-            <!-- Ubicación -->
-            <div style="background: #FFFFFF; border-radius: var(--border-radius); border: 1px solid var(--border-light); overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
-                
-                <div style="padding: 45px 35px; display: flex; flex-direction: column; justify-content: center;">
-                    <span class="section-subtitle">Consulta Presencial</span>
-                    <h2 style="font-size: 1.8rem; margin-bottom: 12px;">Psicorosselló</h2>
-                    <p style="color: var(--text-main); font-weight: 500; margin-bottom: 12px;">
-                        Carrer del Rosselló, 17, Entresol 2<br>
-                        Eixample, 08029 Barcelona
-                    </p>
-                    <p style="color: var(--text-light); font-size: 0.92rem; margin-bottom: 22px;">
-                        Ubicado en el Eixample, próximo a Estació de Sants y paradas de metro L5 Entença / Sants Estació. Espacio sanitario regulado, confidencial y accesible.
-                    </p>
+            
+<!-- =========================================
+     UBICACIÓN - CONSULTA PRESENCIAL
+     Diseño adaptable a ordenador y móvil
+     ========================================= -->
 
-                    <div style="background-color: var(--bg-alt); padding: 18px; border-radius: 8px; border-left: 3px solid var(--secondary);">
-                        <strong style="color: var(--text-main); font-size: 0.92rem;">Condición de Reserva Presencial:</strong>
-                        <p style="color: var(--text-light); font-size: 0.85rem; margin-top: 4px;">
-                            Al gestionarse en despachos de atención compartida, toda reserva presencial requiere realizarse con un mínimo de <strong>7 días de antelación</strong>.
-                        </p>
-                    </div>
-                </div>
+<div class="location-panel">
 
-                <!-- Mapa -->
-                <div style="min-height: 380px; width: 100%; background-color: var(--bg-alt);">
-                    <iframe 
-                        title="Ubicación Psicorosselló"
-                        width="100%" 
-                        height="100%" 
-                        frameborder="0" 
-                        scrolling="no" 
-                        marginheight="0" 
-                        marginwidth="0" 
-                        src="https://maps.google.com/maps?q=Carrer%20del%20Rossell%C3%B3,%2017,%2008029%20Barcelona&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                        style="border: 0; min-height: 380px; display: block;">
-                    </iframe>
-                </div>
+    <!-- =====================================
+         INFORMACIÓN DE LA CONSULTA
+         ===================================== -->
 
-            </div>
+    <div class="location-info">
+
+        <span class="section-subtitle">
+            Consulta Presencial
+        </span>
+
+        <h2 class="location-title">
+            Psicorosselló
+        </h2>
+
+        <!-- Dirección -->
+        <p class="location-address">
+            Carrer del Rosselló, 17, Entresol 2
+            <br>
+            Eixample, 08029 Barcelona
+        </p>
+
+        <!-- Información sobre la ubicación -->
+        <p class="location-description">
+            Ubicado en el Eixample, próximo a Estació
+            de Sants y paradas de metro L5 Entença /
+            Sants Estació. Espacio sanitario regulado,
+            confidencial y accesible.
+        </p>
+
+        <!-- Condiciones de reserva presencial -->
+        <div class="location-notice">
+
+            <strong>
+                Condición de Reserva Presencial:
+            </strong>
+
+            <p>
+                Al gestionarse en despachos de atención
+                compartida, toda reserva presencial
+                requiere realizarse con un mínimo de
+                <strong>7 días de antelación</strong>.
+            </p>
 
         </div>
+
+    </div>
+
+
+    <!-- =====================================
+         MAPA DE GOOGLE MAPS
+         ===================================== -->
+
+    <div class="location-map">
+
+        <iframe
+            title="Ubicación de Psicorosselló en Barcelona"
+            src="https://maps.google.com/maps?q=Carrer%20del%20Rossell%C3%B3,%2017,%2008029%20Barcelona&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+        </iframe>
+
+        <!-- Botón para abrir Google Maps -->
+        <a
+            href="https://www.google.com/maps/search/?api=1&amp;query=Carrer%20del%20Rossell%C3%B3%2017%2008029%20Barcelona"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="location-directions">
+
+            Cómo llegar ↗
+
+        </a>
+
+    </div>
+
+</div>
+
     </main>
 
     <!-- Pie de página -->
