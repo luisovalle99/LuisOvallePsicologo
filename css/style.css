@@ -1296,3 +1296,18 @@ footer {
 
 }
 
+/* =========================================
+   INICIO - DESPLAZAR CONTENIDO A LA DERECHA
+   SOLO ORDENADOR
+   ========================================= */
+
+@media screen and (min-width: 1024px) {
+
+    .hero {
+        position: relative;
+        left: 70px;
+    }
+
+}
+
+
