@@ -1296,16 +1296,17 @@ footer {
 
 }
 
+
 /* =========================================
-   INICIO - DESPLAZAR CONTENIDO A LA DERECHA
-   SOLO ORDENADOR
+   MENÚ SUPERIOR - AJUSTE SOLO ORDENADOR
    ========================================= */
 
 @media screen and (min-width: 1024px) {
 
-    .hero {
+    /* Desplazar los enlaces hacia la derecha */
+    .site-nav .nav-links {
         position: relative;
-        left: 70px;
+        left: 40px;
     }
 
 }
