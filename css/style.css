@@ -645,44 +645,87 @@ p {
     letter-spacing: 1px;
 }
     
+/
 /* =========================================
-   TIPOGRAFÍA PARA ORDENADOR
-   No modifica la versión móvil
+   TAMAÑO DE LETRA - SOLO ORDENADOR
+   Pantallas de 1024px o más
    ========================================= */
 
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
 
-    /* Texto general */
-    body {
+    /* Nombre de Luis */
+    .logo {
+        font-size: 27px;
+    }
+
+    /* Menú superior */
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
         font-size: 18px;
     }
 
-    /* Párrafos */
-    p {
+    /* Botones */
+    .btn,
+    .nav-links a.btn {
+        font-size: 17px;
+    }
+
+    /* Texto de la portada */
+    .hero p {
+        font-size: 20px;
+        line-height: 1.75;
+    }
+
+    .hero-tag {
+        font-size: 14px;
+    }
+
+    /* Párrafos generales */
+    main p,
+    section p {
         font-size: 18px;
         line-height: 1.8;
     }
 
-    /* Menú de navegación */
-    .nav-links a {
+    /* Textos de las tarjetas */
+    .framework-item p,
+    .service-card p,
+    .step-card p,
+    .modality-item p,
+    .contact-card p {
         font-size: 17px;
+        line-height: 1.75;
     }
 
-    /* Nombre de Luis en la cabecera */
-    .logo {
-        font-size: 25px;
+    /* Preguntas frecuentes */
+    .faq-question {
+        font-size: 19px;
     }
 
-    /* Botones */
-    .btn {
-        font-size: 17px;
+    .faq-answer,
+    .faq-answer p {
+        font-size: 18px;
     }
 
-    /* Subtítulos de las secciones */
-    .section-subtitle {
+    /* Subtítulos */
+    .section-subtitle,
+    .framework-badge,
+    .contact-meta {
         font-size: 15px;
     }
+
+    /* Pie de página */
+    .footer-content p,
+    .footer-legal-nav a {
+        font-size: 16px;
+    }
+
+    /* Copyright */
+    .copyright {
+        font-size: 14px !important;
+    }
 }
-
-
 }
