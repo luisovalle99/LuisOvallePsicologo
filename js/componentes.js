@@ -16,7 +16,7 @@ const FOOTER = String.raw`<footer>
             <p><strong>Luis Ovalle Psicología</strong> — Psicólogo General Sanitario</p>
             <p>Nº Colegiado 34183 (Col·legi Oficial de Psicologia de Catalunya)</p>
             <p>Psicorosselló (Barcelona) y Consulta Online</p>
-            <nav class="footer-legal-nav">
+            <div class="footer-legal-nav">
                 <a href="aviso-legal.html">Aviso Legal</a>
                 <a href="politica-privacidad.html">Política de Privacidad</a>
                 <a href="politica-cookies.html">Política de Cookies</a>
