@@ -1538,36 +1538,48 @@ footer {
 
 }
 
-/
+
+
 /* =========================================
    PROFESIÓN Y NÚMERO DE COLEGIADO
-   DOS LÍNEAS EN MÓVIL
    ========================================= */
+
+/* ORDENADOR: UNA SOLA LÍNEA */
+
+.hero-tag .hero-profesion,
+.hero-tag .hero-col {
+    display: inline;
+}
+
+.hero-tag .hero-col::before {
+    content: " · ";
+}
+
+/* MÓVIL: DOS LÍNEAS */
 
 @media screen and (max-width: 900px) {
 
-    .hero-tag {
+    .hero .hero-tag {
         display: inline-flex !important;
         flex-direction: column !important;
-        align-items: center;
+        align-items: center !important;
+        justify-content: center;
         text-align: center;
         gap: 4px;
         max-width: 100%;
-        white-space: normal;
+        padding: 8px 18px;
     }
 
-    .hero-profesion,
-    .hero-col {
+    .hero-tag .hero-profesion,
+    .hero-tag .hero-col {
         display: block !important;
-        width: 100%;
-        white-space: normal;
+        width: auto;
+        white-space: nowrap;
     }
 
-    .hero-col::before {
+    .hero-tag .hero-col::before {
         content: none !important;
-        display: none !important;
     }
-
 }
 
 
