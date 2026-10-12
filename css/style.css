@@ -1538,32 +1538,38 @@ footer {
 
 }
 
+/
 /* =========================================
-   INICIO - NÚMERO DE COLEGIADO EN MÓVIL
+   PROFESIÓN Y NÚMERO DE COLEGIADO
+   DOS LÍNEAS EN MÓVIL
    ========================================= */
 
-/* En ordenador se mantiene en una línea */
-.hero-col::before {
-    content: " · ";
-}
-
-/* En móvil, número de colegiado debajo */
 @media screen and (max-width: 900px) {
 
+    .hero-tag {
+        display: inline-flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+        gap: 4px;
+        max-width: 100%;
+        white-space: normal;
+    }
+
+    .hero-profesion,
     .hero-col {
-        display: block;
-        margin-top: 4px;
+        display: block !important;
+        width: 100%;
+        white-space: normal;
     }
 
     .hero-col::before {
-        content: none;
+        content: none !important;
+        display: none !important;
     }
 
-    .hero-tag {
-        text-align: center;
-        line-height: 1.5;
-    }
 }
+
 
 
 
