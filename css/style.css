@@ -726,3 +726,70 @@ footer {
         font-size: 14px !important;
     }
 }
+
+/* =========================================
+   TÍTULOS MÁS GRANDES - SOLO ORDENADOR
+   No modifica la versión móvil
+   ========================================= */
+
+@media screen and (min-width: 1024px) {
+
+    /* Título principal de Inicio */
+    .hero h1 {
+        font-size: 56px;
+        line-height: 1.15;
+    }
+
+    /* Títulos principales de páginas interiores */
+    .page-header h1 {
+        font-size: 54px !important;
+        line-height: 1.2;
+    }
+
+    /* Títulos generales de secciones */
+    .services-header h2,
+    .section-container > h2,
+    .pricing-section h2,
+    .faq-section h2,
+    .process-section h2 {
+        font-size: 42px;
+        line-height: 1.25;
+    }
+
+    /* Frase destacada */
+    .quote-section h2 {
+        font-size: 32px;
+        line-height: 1.4;
+    }
+
+    /* Títulos del marco clínico */
+    .framework-item h3 {
+        font-size: 24px;
+    }
+
+    /* Títulos de las especialidades */
+    .service-card h3 {
+        font-size: 24px;
+    }
+
+    /* Títulos de los pasos del proceso */
+    .step-card h3 {
+        font-size: 22px;
+    }
+
+    /* Título de la tarjeta de tarifas */
+    .pricing-header h3 {
+        font-size: 29px;
+    }
+
+    /* Títulos de las modalidades */
+    .modality-item h4 {
+        font-size: 23px;
+    }
+
+    /* Títulos de las tarjetas de contacto */
+    .contact-card h3 {
+        font-size: 24px;
+    }
+}
+
