@@ -20,7 +20,7 @@ const FOOTER = String.raw`<footer>
                 <a href="aviso-legal.html">Aviso Legal</a>
                 <a href="politica-privacidad.html">Política de Privacidad</a>
                 <a href="politica-cookies.html">Política de Cookies</a>
-            </nav>
+            </div>
             <p class="copyright">© 2026 Luis Ovalle. Todos los derechos reservados.</p>
         </div>
     </footer>`;
