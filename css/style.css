@@ -793,3 +793,14 @@ footer {
     }
 }
 
+/* =========================================
+   ESCALA TIPOGRÁFICA GLOBAL
+   SOLO ORDENADOR
+   ========================================= */
+
+@media screen and (min-width: 1024px) {
+    html {
+        font-size: 18px;
+    }
+}
+
