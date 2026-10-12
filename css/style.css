@@ -1,10 +1,11 @@
 
 /* =========================================
-   WEB LUIS OVALLE PSICOLOGÍA
-   HOJA DE ESTILOS REORGANIZADA
+   LUIS OVALLE PSICOLOGÍA
+   STYLE.CSS COMPLETO Y REPARADO
+   Colores definidos en css/config.css
    ========================================= */
 
-/* 1. CONFIGURACIÓN GENERAL */
+/* CONFIGURACIÓN GENERAL */
 
 * {
     box-sizing: border-box;
@@ -13,8 +14,6 @@
 }
 
 :root {
-    /* Cambiar este valor para ampliar toda
-       la tipografía del ordenador */
     --letra-ordenador: 18px;
 }
 
@@ -38,9 +37,8 @@ h1, h2, h3, h4, .logo {
     letter-spacing: -0.01em;
 }
 
-
 /* =========================================
-   2. MENÚ DE NAVEGACIÓN
+   MENÚ DE NAVEGACIÓN
    ========================================= */
 
 nav {
@@ -84,9 +82,8 @@ nav {
     color: var(--accent);
 }
 
-
 /* =========================================
-   3. BOTONES
+   BOTONES
    ========================================= */
 
 .btn {
@@ -121,9 +118,8 @@ nav {
     color: #FFFFFF !important;
 }
 
-
 /* =========================================
-   4. PORTADA / INICIO
+   PORTADA / INICIO
    ========================================= */
 
 .hero {
@@ -177,9 +173,8 @@ nav {
     flex-wrap: wrap;
 }
 
-
 /* =========================================
-   5. FOTOGRAFÍA DE LUIS
+   FOTOGRAFÍA DE LUIS
    ========================================= */
 
 .hero-image-wrapper {
@@ -201,9 +196,8 @@ nav {
     border: 1px solid var(--border-light);
 }
 
-
 /* =========================================
-   6. FRASE DESTACADA
+   FRASE DESTACADA
    ========================================= */
 
 .quote-section {
@@ -222,9 +216,8 @@ nav {
     line-height: 1.4;
 }
 
-
 /* =========================================
-   7. MARCO CLÍNICO
+   MARCO CLÍNICO
    ========================================= */
 
 .framework-section {
@@ -270,9 +263,8 @@ nav {
     font-size: 0.94rem;
 }
 
-
 /* =========================================
-   8. TARJETAS DE SERVICIOS DE INICIO
+   SERVICIOS DE INICIO
    ========================================= */
 
 .services {
@@ -364,9 +356,8 @@ nav {
     text-decoration: underline;
 }
 
-
 /* =========================================
-   9. PROCESO EN PASOS
+   PROCESO EN PASOS
    ========================================= */
 
 .process-section {
@@ -406,9 +397,8 @@ nav {
     font-size: 0.9rem;
 }
 
-
 /* =========================================
-   10. TARIFAS
+   TARIFAS
    ========================================= */
 
 .pricing-section {
@@ -484,9 +474,8 @@ nav {
     text-align: center;
 }
 
-
 /* =========================================
-   11. PREGUNTAS FRECUENTES
+   PREGUNTAS FRECUENTES
    ========================================= */
 
 .faq-section {
@@ -545,9 +534,8 @@ nav {
     line-height: 1.65;
 }
 
-
 /* =========================================
-   12. CONTACTO
+   CONTACTO
    ========================================= */
 
 .contact-grid {
@@ -588,10 +576,8 @@ nav {
     margin-bottom: 22px;
 }
 
-
 /* =========================================
-   13. FOOTER
-   Se mantiene el diseño actual.
+   FOOTER - CONSERVAR DISEÑO
    ========================================= */
 
 footer {
@@ -639,9 +625,8 @@ footer {
     margin-top: 12px;
 }
 
-
 /* =========================================
-   14. SOBRE MÍ - DISEÑO EDITORIAL
+   SOBRE MÍ - DISEÑO EDITORIAL
    ========================================= */
 
 .about-editorial {
@@ -680,8 +665,7 @@ footer {
 
 .about-editorial-grid {
     display: grid;
-    grid-template-columns:
-        minmax(0, 1.15fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
     gap: 55px;
     align-items: start;
 }
@@ -755,10 +739,8 @@ footer {
     font-size: 1.1rem;
 }
 
-
 /* =========================================
-   15. ESPECIALIDADES - CUADRÍCULA 2 x 2
-   Compatible con clases esp-* del HTML.
+   ESPECIALIDADES - DISEÑO 2 X 2
    ========================================= */
 
 .esp-container {
@@ -767,7 +749,7 @@ footer {
     margin: 0 auto;
 }
 
-/* CABECERA */
+/* CABECERA DE ESPECIALIDADES */
 
 .esp-page-header {
     background-color: var(--bg-base);
@@ -814,7 +796,7 @@ footer {
     align-items: stretch;
 }
 
-/* TARJETAS */
+/* TARJETAS DE ESPECIALIDADES */
 
 .esp-card {
     min-width: 0;
@@ -872,7 +854,7 @@ footer {
     margin-bottom: 25px;
 }
 
-/* LISTA DE INTERVENCIONES */
+/* LISTAS DE INTERVENCIÓN */
 
 .esp-card-list {
     list-style: none;
@@ -901,8 +883,6 @@ footer {
     font-weight: 700;
     font-size: 1rem;
 }
-
-/* EFECTO AL PASAR EL RATÓN */
 
 @media (hover: hover) {
     .esp-card:hover {
@@ -940,20 +920,15 @@ footer {
     margin: 0 auto 28px;
 }
 
-
 /* =========================================
-   16. RESPONSIVE - TABLET Y MÓVIL
+   RESPONSIVE - TABLET Y MÓVIL
    ========================================= */
 
 @media screen and (max-width: 900px) {
 
-    /* Menú */
-
     .nav-links {
         display: none;
     }
-
-    /* Inicio */
 
     .hero {
         flex-direction: column-reverse;
@@ -982,7 +957,7 @@ footer {
         font-size: 2.4rem;
     }
 
-    /* Sobre mí */
+    /* SOBRE MÍ */
 
     .about-editorial {
         padding: 60px 8% 80px;
@@ -1013,7 +988,7 @@ footer {
         font-size: 1.4rem;
     }
 
-    /* Especialidades */
+    /* ESPECIALIDADES */
 
     .esp-page-header {
         padding: 55px 8% 45px;
@@ -1046,9 +1021,8 @@ footer {
     }
 }
 
-
 /* =========================================
-   17. MÓVILES PEQUEÑOS
+   MÓVILES PEQUEÑOS
    ========================================= */
 
 @media screen and (max-width: 480px) {
@@ -1078,10 +1052,7 @@ footer {
     }
 }
 
-
-/* =========================================
-   18. FOOTER EN MÓVIL
-   ========================================= */
+/* FOOTER EN MÓVIL */
 
 @media (max-width: 768px) {
     .footer-legal-nav {
@@ -1090,14 +1061,10 @@ footer {
     }
 }
 
-
 /* =========================================
-   19. ESCALA GLOBAL SOLO PARA ORDENADOR
+   TIPOGRAFÍA GLOBAL - SOLO ORDENADOR
 
-   Para ampliar la tipografía modifica
-   --letra-ordenador al inicio del archivo.
-
-   16px = Original
+   16px = original
    18px = +12,5%
    19px = +18,75%
    20px = +25%
