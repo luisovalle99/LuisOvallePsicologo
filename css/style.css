@@ -8,8 +8,26 @@
     padding: 0;
 }
 
+/* =========================================
+   CONTROL CENTRAL DE TIPOGRAFÍA
+
+   Cambia SOLO --letra-ordenador.
+
+   16px = tamaño original
+   18px = +12,5%
+   19px = +18,75%
+   20px = +25%
+
+   En móvil se mantiene el tamaño original.
+   ========================================= */
+
+:root {
+    --letra-ordenador: 18px;
+}
+
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
@@ -646,161 +664,19 @@ footer {
 }
 
 /* =========================================
-   TIPOGRAFÍA MÁS GRANDE - SOLO ORDENADOR
-   A partir de 1024px de ancho
+   ESCALA TIPOGRÁFICA GLOBAL - SOLO ORDENADOR
+
+   Amplía proporcionalmente todos los
+   tamaños definidos en rem.
+
+   No modifica fotografías ni dimensiones
+   definidas en px.
    ========================================= */
 
 @media screen and (min-width: 1024px) {
 
-    /* Nombre de Luis */
-    .logo {
-        font-size: 27px;
-    }
-
-    /* Enlaces del menú */
-    .nav-links {
-        gap: 18px;
-    }
-
-    .nav-links a {
-        font-size: 18px;
-    }
-
-    /* Botones */
-    .btn,
-    .nav-links a.btn {
-        font-size: 17px;
-    }
-
-    /* Texto de la portada */
-    .hero p {
-        font-size: 20px;
-        line-height: 1.75;
-    }
-
-    .hero-tag {
-        font-size: 14px;
-    }
-
-    /* Párrafos generales */
-    main p,
-    section p {
-        font-size: 18px;
-        line-height: 1.8;
-    }
-
-    /* Textos de tarjetas */
-    .framework-item p,
-    .service-card p,
-    .step-card p,
-    .modality-item p,
-    .contact-card p {
-        font-size: 17px;
-        line-height: 1.75;
-    }
-
-    /* Preguntas frecuentes */
-    .faq-question {
-        font-size: 19px;
-    }
-
-    .faq-answer,
-    .faq-answer p {
-        font-size: 18px;
-    }
-
-    /* Subtítulos */
-    .section-subtitle,
-    .framework-badge,
-    .contact-meta {
-        font-size: 15px;
-    }
-
-    /* Pie de página */
-    .footer-content p,
-    .footer-legal-nav a {
-        font-size: 16px;
-    }
-
-    .copyright {
-        font-size: 14px !important;
-    }
-}
-
-/* =========================================
-   TÍTULOS MÁS GRANDES - SOLO ORDENADOR
-   No modifica la versión móvil
-   ========================================= */
-
-@media screen and (min-width: 1024px) {
-
-    /* Título principal de Inicio */
-    .hero h1 {
-        font-size: 56px;
-        line-height: 1.15;
-    }
-
-    /* Títulos principales de páginas interiores */
-    .page-header h1 {
-        font-size: 54px !important;
-        line-height: 1.2;
-    }
-
-    /* Títulos generales de secciones */
-    .services-header h2,
-    .section-container > h2,
-    .pricing-section h2,
-    .faq-section h2,
-    .process-section h2 {
-        font-size: 42px;
-        line-height: 1.25;
-    }
-
-    /* Frase destacada */
-    .quote-section h2 {
-        font-size: 32px;
-        line-height: 1.4;
-    }
-
-    /* Títulos del marco clínico */
-    .framework-item h3 {
-        font-size: 24px;
-    }
-
-    /* Títulos de las especialidades */
-    .service-card h3 {
-        font-size: 24px;
-    }
-
-    /* Títulos de los pasos del proceso */
-    .step-card h3 {
-        font-size: 22px;
-    }
-
-    /* Título de la tarjeta de tarifas */
-    .pricing-header h3 {
-        font-size: 29px;
-    }
-
-    /* Títulos de las modalidades */
-    .modality-item h4 {
-        font-size: 23px;
-    }
-
-    /* Títulos de las tarjetas de contacto */
-    .contact-card h3 {
-        font-size: 24px;
-    }
-}
-
-/* =========================================
-   ESCALA TIPOGRÁFICA GLOBAL
-   SOLO ORDENADOR
-   ========================================= */
-
-@media screen and (min-width: 1024px) {
     html {
-        font-size: 18px;
+        font-size: var(--letra-ordenador);
     }
-}
 
+}
