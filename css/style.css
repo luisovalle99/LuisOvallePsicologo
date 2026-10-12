@@ -1400,5 +1400,49 @@ footer {
     }
 }
 
+/* =========================================
+   ESPECIALIDADES - ACABADO FINAL
+   ========================================= */
+
+/* Cuadrícula de dos columnas en ordenador */
+@media screen and (min-width: 901px) {
+    .esp-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+        align-items: stretch;
+    }
+}
+
+/* Tarjetas */
+.esp-card {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* Separación entre explicación y puntos clave */
+.esp-card-list {
+    border-top: 1px solid var(--border-light);
+    padding-top: 22px;
+}
+
+/* Títulos */
+.esp-card-title {
+    font-family: 'Lora', serif;
+    color: var(--text-main);
+}
+
+/* Mejor legibilidad */
+.esp-card-text {
+    line-height: 1.8;
+}
+
+/* Una columna en tablet y móvil */
+@media screen and (max-width: 900px) {
+    .esp-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 
