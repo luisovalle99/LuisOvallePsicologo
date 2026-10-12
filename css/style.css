@@ -721,3 +721,127 @@ footer {
     }
 
 }
+
+/* =========================================
+   SOBRE MÍ - FILOSOFÍA Y FORMACIÓN
+   ========================================= */
+
+/* Fondo y espacio de la sección */
+.about-section {
+    padding: 90px 8% 110px;
+    background-color: var(--bg-base);
+}
+
+/* Ancho máximo del contenido */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+.about-heading {
+    margin-bottom: 45px;
+}
+
+.about-heading h2 {
+    font-size: 2.3rem;
+    line-height: 1.25;
+    color: var(--accent);
+    margin-top: 10px;
+}
+
+/* Dos columnas en ordenador */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 65px;
+    align-items: start;
+}
+
+/* Texto principal */
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: var(--text-light);
+    margin-bottom: 28px;
+}
+
+/* Tarjeta de formación */
+.about-training {
+    background-color: #FFFFFF;
+    padding: 42px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-light);
+}
+
+/* Título de formación */
+.about-training h3 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+/* Lista de formación */
+.training-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Cada elemento */
+.training-list li {
+    position: relative;
+    padding-left: 27px;
+    margin-bottom: 22px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+/* Símbolo de verificación */
+.training-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* Último elemento */
+.training-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================
+   TABLET Y MÓVIL
+   Una columna en pantallas pequeñas
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .about-section {
+        padding: 55px 8% 75px;
+    }
+
+    .about-heading {
+        margin-bottom: 30px;
+    }
+
+    .about-heading h2 {
+        font-size: 2rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .about-text p {
+        font-size: 1.05rem;
+    }
+
+    .about-training {
+        padding: 30px 25px;
+    }
+}
+
