@@ -903,22 +903,7 @@ footer {
     border-radius: 3px;
 }
 
-
-/* =========================================
-   3. DISTRIBUCIÓN EN DOS COLUMNAS
-   ========================================= */
-
-.about-editorial-grid {
-    display: grid;
-
-    /* Texto ligeramente más ancho */
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-
-    gap: 55px;
-    align-items: start;
-}
-
-
+/
 /* =========================================
    4. COLUMNA IZQUIERDA - TEXTO
    ========================================= */
