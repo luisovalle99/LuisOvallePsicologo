@@ -1511,5 +1511,33 @@ footer {
 
 }
 
+/* =========================================
+   INICIO - TEXTO PRIMERO EN MÓVIL
+   ========================================= */
+
+@media screen and (max-width: 900px) {
+
+    .hero {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    /* PRIMERO: Terapia a tu medida */
+    .hero-content {
+        order: 1 !important;
+        width: 100%;
+    }
+
+    /* SEGUNDO: Fotografía de Luis */
+    .hero-image-wrapper {
+        order: 2 !important;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+}
+
+
 
 
