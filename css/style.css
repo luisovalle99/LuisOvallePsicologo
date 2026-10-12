@@ -931,10 +931,10 @@ footer {
     }
 
     .hero {
-        flex-direction: column;
-        padding-top: 35px;
-        text-align: center;
-    }
+    flex-direction: column;
+    padding-top: 35px;
+    text-align: center;
+}
 
     .hero-buttons {
         justify-content: center;
